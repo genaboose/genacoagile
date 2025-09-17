@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Check, Clipboard, ClipboardCheck, TrendingUp } from "lucide-react";
 
 const QUESTIONS = [
-  { id: 1, text: "Wird Arbeit Ende‑zu‑Ende sichtbar (inkl. WIP‑Limits)?" },
+  { id: 1, text: "Wird Arbeit Ende-zu-Ende sichtbar (inkl. WIP-Limits)?" },
   { id: 2, text: "Sind Sprints/Takt fix – Releases aber unabhängig?" },
   { id: 3, text: "Gibt es ≤ 3 Übergaben von Idee bis Umsetzung?" },
   { id: 4, text: "Liegt ungeplante Arbeit im Sprint bei < 10 %?" },
@@ -16,15 +16,13 @@ const QUESTIONS = [
 ];
 
 function classify(score: number) {
-  if (score <= 4) return { label: "Rot – hohes Potenzial", color: "bg-red-500", hint: "Hohe versteckte Verzögerungskosten. 7‑Tage Flow X‑Ray empfohlen." };
+  if (score <= 4) return { label: "Rot – hohes Potenzial", color: "bg-red-500", hint: "Hohe versteckte Verzögerungskosten. 7-Tage Flow X-Ray empfohlen." };
   if (score <= 7) return { label: "Gelb – spürbares Potenzial", color: "bg-amber-500", hint: "Gute Basis – mit 2–3 Quick Wins deutlich schneller." };
-  return { label: "Grün – reif", color: "bg-green-600", hint: "Weiter so – Feintuning über gezielte Bottleneck‑Analysen." };
+  return { label: "Grün – reif", color: "bg-green-600", hint: "Weiter so – Feintuning über gezielte Bottleneck-Analysen." };
 }
 
 export default function FlowXRayScorecard({ onBook }: { onBook?: () => void }) {
-  const [answers, setAnswers] = useState<Record<number, boolean | null>>(
-    Object.fromEntries(QUESTIONS.map(q => [q.id, null]))
-  );
+  const [answers, setAnswers] = useState<Record<number, boolean | null>>(Object.fromEntries(QUESTIONS.map(q => [q.id, null])));
   const [meta, setMeta] = useState({ company: "", name: "", email: "" });
   const [copied, setCopied] = useState(false);
 
@@ -42,8 +40,9 @@ export default function FlowXRayScorecard({ onBook }: { onBook?: () => void }) {
       `Unternehmen: ${meta.company || "—"}`,
       `Kontakt: ${meta.name || "—"} <${meta.email || "—"}>`,
       `Score: ${score}/10 (${result.label})`,
-      `---`
-    ].concat(QUESTIONS.map(q => `${q.id}. ${q.text} — ${answers[q.id] ? "Ja" : "Nein"}`));
+      `---`,
+      ...QUESTIONS.map(q => `${q.id}. ${q.text} — ${answers[q.id] ? "Ja" : "Nein"}`)
+    ];
     await navigator.clipboard.writeText(lines.join("\n"));
     setCopied(true); setTimeout(() => setCopied(false), 1800);
   };
@@ -51,8 +50,8 @@ export default function FlowXRayScorecard({ onBook }: { onBook?: () => void }) {
   return (
     <div className="max-w-3xl mx-auto p-6">
       <div className="text-center mb-6">
-        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Flow X‑Ray Scorecard</h1>
-        <p className="mt-2 text-slate-600">Beantworten Sie 10 Fragen – erhalten Sie sofort Ihre Einschätzung und die nächsten Schritte.</p>
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Flow X-Ray Scorecard</h1>
+        <p className="mt-2 text-slate-600">10 Fragen – sofortige Einordnung & nächste Schritte.</p>
       </div>
 
       <div className="w-full bg-slate-100 rounded-full h-2 mb-4">
@@ -104,7 +103,7 @@ export default function FlowXRayScorecard({ onBook }: { onBook?: () => void }) {
 
         <div className="mt-4 grid gap-2 text-sm">
           <div className="flex items-center gap-2"><Check className="w-4 h-4" /> Individuelle Kurzempfehlung in 20 Min. – kostenlos.</div>
-          <div className="flex items-center gap-2"><TrendingUp className="w-4 h-4" /> 7‑Tage Flow X‑Ray (Festpreis) als nächster Schritt.</div>
+          <div className="flex items-center gap-2"><TrendingUp className="w-4 h-4" /> 7-Tage Flow X-Ray (Festpreis) als nächster Schritt.</div>
         </div>
 
         <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -113,18 +112,19 @@ export default function FlowXRayScorecard({ onBook }: { onBook?: () => void }) {
           </button>
           <a className="px-3 py-2 rounded-xl border hover:bg-slate-50"
              href={`mailto:sales@genacoagile.de?subject=Flow%20X-Ray%20Scorecard&body=${encodeURIComponent(
-              `Unternehmen: ${meta.company}\nName: ${meta.name}\nE-Mail: ${meta.email}\nScore: ${score}/10 (${result.label})\n\nAntworten:\n` +
-              QUESTIONS.map(q => `${q.id}. ${q.text} — ${answers[q.id] ? 'Ja' : 'Nein'}`).join('\n'))}`}>
-            Per E‑Mail senden
+              `Unternehmen: ${meta.company}\\nName: ${meta.name}\\nE-Mail: ${meta.email}\\nScore: ${score}/10 (${result.label})\\n\\nAntworten:\\n` +
+              QUESTIONS.map(q => `${q.id}. ${q.text} — ${answers[q.id] ? 'Ja' : 'Nein'}`).join('\\n'))}`}>
+            Per E-Mail senden
           </a>
           <button onClick={onBook || (() => (window.location.href = "/booking"))}
                   className="px-4 py-2 rounded-xl bg-emerald-600 text-white font-medium hover:opacity-90">
-            20‑Min Termin buchen
+            20-Min Termin buchen
           </button>
         </div>
       </div>
 
-      <p className="text-xs text-slate-500 mt-4">Hinweis: Diese Selbst‑Einschätzung ersetzt keine detaillierte Analyse. Für eine valide Baseline empfehlen wir das 7‑Tage Flow X‑Ray (inkl. Board‑Memo).</p>
+      <p className="text-xs text-slate-500 mt-4">Hinweis: Diese Selbst-Einschätzung ersetzt keine detaillierte Analyse. Für eine valide Baseline empfehlen wir das 7-Tage Flow X-Ray (inkl. Board-Memo).</p>
     </div>
   );
 }
+
