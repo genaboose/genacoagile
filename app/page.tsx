@@ -40,8 +40,10 @@ export default function Page() {
             <a href="#team" className="hover:text-emerald-navy">Team</a>
             <a href="#kontakt" className="hover:text-emerald-navy">Kontakt</a>
           </nav>
-          <a href="/booking" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-emerald-navy text-white hover:opacity-90 text-sm">
-            Gespräch buchen <ArrowRight className="w-4 h-4" />
+          <a href="/booking" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-gold text-brand-navy font-medium hover:opacity-90 text-sm">
+          Gespräch buchen
+          </a>
+
           </a>
         </div>
       </header>
