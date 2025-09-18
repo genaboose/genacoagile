@@ -1,4 +1,5 @@
 'use client';
+
 import { useMemo, useState } from "react";
 import { Check, Clipboard, ClipboardCheck, TrendingUp } from "lucide-react";
 
@@ -22,9 +23,7 @@ function classify(score: number) {
 }
 
 export default function FlowXRayScorecard({ onBook }: { onBook?: () => void }) {
-  const [answers, setAnswers] = useState<Record<number, boolean | null>>(
-    Object.fromEntries(QUESTIONS.map(q => [q.id, null]))
-  );
+  const [answers, setAnswers] = useState<Record<number, boolean | null>>(Object.fromEntries(QUESTIONS.map(q => [q.id, null])));
   const [meta, setMeta] = useState({ company: "", name: "", email: "" });
   const [copied, setCopied] = useState(false);
 
@@ -53,14 +52,16 @@ export default function FlowXRayScorecard({ onBook }: { onBook?: () => void }) {
     <div className="max-w-3xl mx-auto p-6">
       <div className="text-center mb-6">
         <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Flow X-Ray Scorecard</h1>
-        <p className="mt-2 text-slate-600">10 Fragen – sofortige Einordnung & nächste Schritte.</p>
+        <p className="mt-2 text-slate-600">Beantworten Sie 10 Fragen – erhalten Sie sofort Ihre Einschätzung und die nächsten Schritte.</p>
       </div>
 
+      {/* Progress */}
       <div className="w-full bg-slate-100 rounded-full h-2 mb-4">
-        <div className={`h-2 rounded-full ${percent < 100 ? "bg-slate-400" : "bg-emerald-600"}`} style={{ width: `${percent}%` }} />
+        <div className={`h-2 rounded-full ${percent < 100 ? "bg-slate-400" : "bg-brand-navy"}`} style={{ width: `${percent}%` }} />
       </div>
       <div className="text-right text-xs text-slate-500 mb-6">{percent}% ausgefüllt</div>
 
+      {/* Fragen */}
       <div className="grid gap-4">
         {QUESTIONS.map(q => (
           <div key={q.id} className="border rounded-2xl p-4 hover:shadow-sm transition">
@@ -81,12 +82,7 @@ export default function FlowXRayScorecard({ onBook }: { onBook?: () => void }) {
         ))}
       </div>
 
-      <div className="mt-6 grid md:grid-cols-3 gap-3">
-        <input className="border rounded-xl px-3 py-2 w-full" placeholder="Unternehmen (optional)" value={meta.company} onChange={e => setMeta({ ...meta, company: e.target.value })} />
-        <input className="border rounded-xl px-3 py-2 w-full" placeholder="Ihr Name (optional)" value={meta.name} onChange={e => setMeta({ ...meta, name: e.target.value })} />
-        <input className="border rounded-xl px-3 py-2 w-full" placeholder="E-Mail (optional)" value={meta.email} onChange={e => setMeta({ ...meta, email: e.target.value })} />
-      </div>
-
+      {/* Ergebnis */}
       <div className="mt-6 border rounded-2xl p-4">
         <div className="flex items-center justify-between gap-4">
           <div>
@@ -104,28 +100,34 @@ export default function FlowXRayScorecard({ onBook }: { onBook?: () => void }) {
         </div>
 
         <div className="mt-4 grid gap-2 text-sm">
-          <div className="flex items-center gap-2"><Check className="w-4 h-4" /> Individuelle Kurzempfehlung in 20 Min. – kostenlos.</div>
-          <div className="flex items-center gap-2"><TrendingUp className="w-4 h-4" /> 7-Tage Flow X-Ray (Festpreis) als nächster Schritt.</div>
+          <div className="flex items-center gap-2"><Check className="w-4 h-4 text-brand-navy" /> Individuelle Kurzempfehlung in 20 Min. – kostenlos.</div>
+          <div className="flex items-center gap-2"><TrendingUp className="w-4 h-4 text-brand-navy" /> 7-Tage Flow X-Ray (Festpreis) als nächster Schritt.</div>
         </div>
 
         <div className="mt-4 flex flex-wrap items-center gap-3">
           <button onClick={handleCopy} className="px-3 py-2 rounded-xl border hover:bg-slate-50 inline-flex items-center gap-2">
             {copied ? <ClipboardCheck className="w-4 h-4" /> : <Clipboard className="w-4 h-4" />} Ergebnis kopieren
           </button>
-          <a className="px-3 py-2 rounded-xl border hover:bg-slate-50"
-             href={`mailto:sales@genacoagile.de?subject=Flow%20X-Ray%20Scorecard&body=${encodeURIComponent(
-              `Unternehmen: ${meta.company}\\nName: ${meta.name}\\nE-Mail: ${meta.email}\\nScore: ${score}/10 (${result.label})\\n\\nAntworten:\\n` +
-              QUESTIONS.map(q => `${q.id}. ${q.text} — ${answers[q.id] ? 'Ja' : 'Nein'}`).join('\\n'))}`}>
+          <a
+            className="px-3 py-2 rounded-xl border hover:bg-slate-50"
+            href={`mailto:sales@genacoagile.de?subject=Flow%20X-Ray%20Scorecard&body=${encodeURIComponent(
+              `Unternehmen: ${meta.company}\nName: ${meta.name}\nE-Mail: ${meta.email}\nScore: ${score}/10 (${result.label})\n\nAntworten:\n` +
+              QUESTIONS.map(q => `${q.id}. ${q.text} — ${answers[q.id] ? 'Ja' : 'Nein'}`).join('\n'))}`}
+          >
             Per E-Mail senden
           </a>
-          <button onClick={onBook || (() => (window.location.href = "/booking"))}
-                  className="px-4 py-2 rounded-xl bg-emerald-600 text-white font-medium hover:opacity-90">
+          <button
+            onClick={onBook || (() => (window.location.href = "/booking"))}
+            className="px-4 py-2 rounded-xl bg-brand-navy text-white font-medium hover:opacity-90"
+          >
             20-Min Termin buchen
           </button>
         </div>
       </div>
 
-      <p className="text-xs text-slate-500 mt-4">Hinweis: Diese Selbst-Einschätzung ersetzt keine detaillierte Analyse. Für eine valide Baseline empfehlen wir das 7-Tage Flow X-Ray (inkl. Board-Memo).</p>
+      <p className="text-xs text-slate-500 mt-4">
+        Hinweis: Diese Selbst-Einschätzung ersetzt keine detaillierte Analyse. Für eine valide Baseline empfehlen wir das 7-Tage Flow X-Ray (inkl. Board-Memo).
+      </p>
     </div>
   );
 }
