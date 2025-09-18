@@ -47,7 +47,7 @@ export default function Page() {
       </header>
 
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-emerald-50 via-white to-sky-50" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#ffcd5924] via-white to-[#0c255d12]" />
         <div className="max-w-7xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
@@ -71,7 +71,7 @@ export default function Page() {
             </div>
           </div>
           <div className="relative md:h-[460px] h-72 border rounded-3xl bg-white shadow-sm flex items-center justify-center">
-            <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.10),transparent_60%)]" />
+            <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_at_top,rgba(12,37,93,0.10),transparent_60%)]" />
             <div className="text-center max-w-sm">
               <p className="text-sm uppercase tracking-widest text-emerald-navy font-semibold">Wir sind Ihr agiles Team</p>
               <h3 className="text-2xl font-bold mt-2">Team‑as‑a‑Service</h3>
