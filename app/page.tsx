@@ -57,4 +57,98 @@ export default function Page() {
               Statt einzelner Freelancer koordinieren Sie ein Team mit klarer Verantwortung, Standards
               und messbaren Ergebnissen. Flow statt Gefühl – in planbaren Sprints.
             </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/flow-xray" className="px-4 py-3 rounded-xl bg-brand-navy text-white font-medium hover:opacity-90">
+                Flow X-Ray starten
+              </Link>
+              <a href="/booking" className="px-4 py-3 rounded-xl border font-medium hover:bg-slate-50">
+                20-Min Call
+              </a>
+            </div>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+              {metrics.map((m) => (
+                <div key={m.label} className="rounded-2xl border p-3">
+                  <div className="text-2xl font-extrabold">{m.value}</div>
+                  <div className="text-xs text-slate-500">{m.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="relative md:h-[460px] h-72 border rounded-3xl bg-white shadow-sm flex items-center justify-center">
+            <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_at_top,rgba(12,37,93,0.10),transparent_60%)]" />
+            <div className="text-center max-w-sm">
+              <p className="text-sm uppercase tracking-widest text-brand-navy font-semibold">Wir sind Ihr agiles Team</p>
+              <h3 className="text-2xl font-bold mt-2">Team-as-a-Service</h3>
+              <ul className="mt-4 text-sm text-slate-600 space-y-2 text-left">
+                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-brand-navy"/> Ein Team, ein Vertrag, klare Outcomes</li>
+                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-brand-navy"/> Skalierbar: Skills just-in-time</li>
+                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-brand-navy"/> Transparente KPIs & Standards</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section id="angebot" className="py-14 md:py-20 border-t">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Was Sie bekommen</h2>
+          <p className="mt-3 text-slate-600 max-w-2xl">Zentral orchestrierte Expertenteams, die in kurzen Takten liefern – mit klaren Spielregeln, Qualitätssicherung und KI-Assistenz.</p>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {features.map((f) => (
+              <div key={f.title} className="rounded-2xl border p-5 hover:shadow-sm transition">
+                <div className="w-10 h-10 rounded-xl bg-[#ffcd5914] text-brand-navy flex items-center justify-center mb-3">
+                  {f.icon}
+                </div>
+                <div className="font-semibold">{f.title}</div>
+                <p className="text-sm text-slate-600 mt-1">{f.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TEAM (vereinfachte Karte; Bilder/Logos kannst du später ergänzen) */}
+      <section id="team" className="py-14 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight">Das Team</h3>
+          <p className="mt-2 text-slate-600 max-w-2xl">Dual Branding: Wir treten als GENACO Agile auf – und bewahren gleichzeitig die individuelle Autorenschaft unserer Expert:innen.</p>
+          {/* Hier kannst du deine Team-Karten einfügen */}
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="kontakt" className="py-16 bg-slate-50 border-t">
+        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight">Lassen Sie uns starten</h3>
+            <p className="mt-2 text-slate-600">Schreiben Sie uns kurz Ihr Anliegen oder buchen Sie direkt einen Termin. Wir melden uns innerhalb von 24h (Werktage).</p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <a href="mailto:hello@genacoagile.de" className="px-4 py-3 rounded-xl border font-medium hover:bg-white">hello@genacoagile.de</a>
+              <a href="/booking" className="px-4 py-3 rounded-xl bg-brand-navy text-white font-medium hover:opacity-90">Gespräch buchen</a>
+            </div>
+          </div>
+          <div className="rounded-3xl border bg-white p-5">
+            <div className="text-sm text-slate-500">Alternativ: Schreiben Sie uns eine E-Mail</div>
+            <div className="mt-3 text-sm text-slate-600">Wir antworten werktags innerhalb von 24 Stunden.</div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="py-10 text-sm text-slate-600">
+        <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <Image src="/DieGraphik.png" alt="" width={22} height={22} />
+            <Image src="/GENACOAgile.png" alt="GENACO Agile" width={110} height={32} />
+          </div>
+          <div className="flex gap-4">
+            <Link href="/impressum" className="hover:text-brand-navy">Impressum</Link>
+            <Link href="/datenschutz" className="hover:text-brand-navy">Datenschutz</Link>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
 
