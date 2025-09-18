@@ -35,12 +35,12 @@ export default function Page() {
           <Image src="/GENACOAgile.png" alt="GENACO Agile" width={150} height={42} priority />
         </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#angebot" className="hover:text-emerald-700">Angebot</a>
-            <Link href="/flow-xray" className="hover:text-emerald-700">Flow X‑Ray</Link>
-            <a href="#team" className="hover:text-emerald-700">Team</a>
-            <a href="#kontakt" className="hover:text-emerald-700">Kontakt</a>
+            <a href="#angebot" className="hover:text-emerald-navy">Angebot</a>
+            <Link href="/flow-xray" className="hover:text-emerald-navy">Flow X‑Ray</Link>
+            <a href="#team" className="hover:text-emerald-navy">Team</a>
+            <a href="#kontakt" className="hover:text-emerald-navy">Kontakt</a>
           </nav>
-          <a href="/booking" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-emerald-600 text-white hover:opacity-90 text-sm">
+          <a href="/booking" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-emerald-navy text-white hover:opacity-90 text-sm">
             Gespräch buchen <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -51,14 +51,14 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-              Ein eingespieltes <span className="text-emerald-700">Expertenteam</span> auf Abruf
+              Ein eingespieltes <span className="text-emerald-navy">Expertenteam</span> auf Abruf
             </h1>
             <p className="mt-6 text-lg text-slate-600">
               Statt einzelner Freelancer koordinieren Sie ein Team mit klarer Verantwortung, Standards
               und messbaren Ergebnissen. Flow statt Gefühl – in planbaren Sprints.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/flow-xray" className="px-4 py-3 rounded-xl bg-emerald-600 text-white font-medium hover:opacity-90">Flow X‑Ray starten</Link>
+              <Link href="/flow-xray" className="px-4 py-3 rounded-xl bg-emerald-navy text-white font-medium hover:opacity-90">Flow X‑Ray starten</Link>
               <a href="/booking" className="px-4 py-3 rounded-xl border font-medium hover:bg-slate-50">20‑Min Call</a>
             </div>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -73,7 +73,7 @@ export default function Page() {
           <div className="relative md:h-[460px] h-72 border rounded-3xl bg-white shadow-sm flex items-center justify-center">
             <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.10),transparent_60%)]" />
             <div className="text-center max-w-sm">
-              <p className="text-sm uppercase tracking-widest text-emerald-700 font-semibold">Wir sind Ihr agiles Team</p>
+              <p className="text-sm uppercase tracking-widest text-emerald-navy font-semibold">Wir sind Ihr agiles Team</p>
               <h3 className="text-2xl font-bold mt-2">Team‑as‑a‑Service</h3>
               <ul className="mt-4 text-sm text-slate-600 space-y-2 text-left">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5"/> Ein Team, ein Vertrag, klare Outcomes</li>
