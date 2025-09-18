@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+
 const config: Config = {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   theme: {
@@ -6,11 +7,12 @@ const config: Config = {
       colors: {
         brand: {
           navy: '#0c255d',
-          gold: '#ffcd59'
-        }
-      }
-    }
+          gold: '#ffcd59',
+        },
+      },
+    },
   },
   plugins: [],
 }
 export default config
+
