@@ -1,10 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Brand Vars (optional, hilfreich für Gradients/Alpha) */
 :root {
   --brand-navy: #0c255d;
-  --brand-gold: #ffcd59; /* ändere hier den Goldton bei Bedarf */
+  --brand-gold: #ffcd59;
 }
 
-:root { color-scheme: light; }
 body { @apply bg-white text-slate-900; }
