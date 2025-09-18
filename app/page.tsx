@@ -1,6 +1,12 @@
 'use client';
 import { ArrowRight, CheckCircle2, Gauge, LineChart, Users, Sparkles, Shield, Clock } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+<div className="flex items-center gap-3">
+  <Image src="/DieGraphik.png" alt="" width={28} height={28} className="rounded-sm" />
+  <Image src="/GENACOAgile.png" alt="GENACO Agile" width={150} height={42} priority />
+</div>
+
 
 export default function Page() {
   const features = [
@@ -132,7 +138,7 @@ export default function Page() {
             <p className="mt-2 text-slate-600">Schreiben Sie uns kurz Ihr Anliegen oder buchen Sie direkt einen Termin. Wir melden uns innerhalb von 24h (Werktage).</p>
             <div className="mt-5 flex flex-wrap gap-3">
               <a href="mailto:hello@genacoagile.de" className="px-4 py-3 rounded-xl border font-medium hover:bg-white">hello@genacoagile.de</a>
-              <a href="/booking" className="px-4 py-3 rounded-xl bg-emerald-600 text-white font-medium hover:opacity-90">Gespräch buchen</a>
+              <a href="/booking" className="px-4 py-3 rounded-xl bg-emerald-navy text-white font-medium hover:opacity-90">Gespräch buchen</a>
             </div>
           </div>
           <div className="rounded-3xl border bg-white p-5">
@@ -145,15 +151,15 @@ export default function Page() {
       <footer className="py-10 text-sm text-slate-600">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-emerald-600" />
+            <div className="w-8 h-8 rounded-xl bg-emerald-navy" />
             <div>
               <div className="font-semibold">GENACO Agile</div>
               <div className="text-xs">Wir sind Ihr agiles Team.</div>
             </div>
           </div>
           <div className="flex gap-4">
-            <Link href="/impressum" className="hover:text-emerald-700">Impressum</Link>
-            <Link href="/datenschutz" className="hover:text-emerald-700">Datenschutz</Link>
+            <Link href="/impressum" className="hover:text-emerald-navy">Impressum</Link>
+            <Link href="/datenschutz" className="hover:text-emerald-navy">Datenschutz</Link>
           </div>
         </div>
       </footer>
