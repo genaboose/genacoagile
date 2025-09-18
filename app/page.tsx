@@ -2,11 +2,6 @@
 import { ArrowRight, CheckCircle2, Gauge, LineChart, Users, Sparkles, Shield, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-<div className="flex items-center gap-3">
-  <Image src="/DieGraphik.png" alt="" width={28} height={28} className="rounded-sm" />
-  <Image src="/GENACOAgile.png" alt="GENACO Agile" width={150} height={42} priority />
-</div>
-
 
 export default function Page() {
   const features = [
@@ -35,11 +30,10 @@ export default function Page() {
     <div className="min-h-screen bg-white text-slate-900">
       <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-emerald-600" />
-            <span className="font-extrabold tracking-tight">GENACO Agile</span>
-            <span className="ml-3 text-sm text-slate-500 hidden md:inline">Wir sind Ihr agiles Team.</span>
-          </div>
+        <div className="flex items-center gap-3">
+          <Image src="/DieGraphik.png" alt="" width={28} height={28} className="rounded-sm" />
+          <Image src="/GENACOAgile.png" alt="GENACO Agile" width={150} height={42} priority />
+        </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#angebot" className="hover:text-emerald-700">Angebot</a>
             <Link href="/flow-xray" className="hover:text-emerald-700">Flow X‑Ray</Link>
