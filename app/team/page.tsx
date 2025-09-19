@@ -21,7 +21,7 @@ const MEMBERS: Member[] = [
     role: 'Agiles Organisationsdesign & Delivery',
     brand: 'GNC Georg Nauerz Consulting',
     tags: ['Operating Model', 'Scaling', 'Flow'],
-    image: '/team/georg.jpg',
+    image: '/team/georg.png',
     linkedin: 'https://www.linkedin.com/in/georgnauerz',
   },
   {
@@ -29,7 +29,7 @@ const MEMBERS: Member[] = [
     role: 'Agile Change & Executive Coaching',
     brand: 'Druckrey Coaching',
     tags: ['Leadership', 'Change', 'Coaching'],
-    image: '/team/stephan.jpg',
+    image: '/team/stephan.png',
     linkedin: 'https://www.linkedin.com/in/stephandruckrey',
   },
   {
@@ -37,7 +37,7 @@ const MEMBERS: Member[] = [
     role: 'Retail-Prozessoptimierung & KVP',
     brand: 'GBW Consulting',
     tags: ['Retail', 'KVP', 'Prozesse'],
-    image: '/team/bianca.jpg',
+    image: '/team/bianca.png',
     linkedin: 'https://www.linkedin.com/in/bianca-wenz-gemeinsam-besser-werden',
   },
   {
