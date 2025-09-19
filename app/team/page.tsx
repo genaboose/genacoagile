@@ -90,9 +90,18 @@ export default function TeamPage() {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Team</h1>
           <p className="mt-2 text-slate-600 max-w-3xl">
-            Dual Branding: Wir treten als <span className="font-semibold text-brand-navy">GENACO Agile</span> auf – und
-            bewahren die individuelle Autorenschaft unserer Expert:innen.
+            Statt einzelne Generalisten zu koordinieren, arbeiten Sie mit einem eingespielten Team:
+            komplementäre Stärken, gemeinsame Playbooks, Qualitätssicherung und Vertretung bei Abwesenheiten.
+            Das reduziert Ihren Koordinationsaufwand, beschleunigt die Umsetzung und macht Ergebnisse verlässlich planbar.
           </p>
+            <ul className="mt-4 text-sm text-slate-700 space-y-1">
+              <li>• Ein Team, ein Vertrag, eine Verantwortung</li>
+              <li>• Komplementäre Skills statt All-in-one-Generalist</li>
+              <li>• Gemeinsame Standards & Review-Takt → konstante Qualität</li>
+              <li>• Vertretung & Skalierung → keine Ausfälle, schneller Ramp-up</li>
+              <li>• Transparente Boards & Metriken → planbare Ergebnisse</li>
+            </ul>
+
         </div>
       </header>
 
