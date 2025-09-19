@@ -33,7 +33,7 @@ export default function Page() {
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#angebot" className="hover:text-brand-navy">Angebot</a>
             <Link href="/flow-xray" className="hover:text-brand-navy">Flow X-Ray</Link>
-            <a href="#team" className="hover:text-brand-navy">Team</a>
+            <Link href="/team" className="hover:text-brand-navy">Team</Link>
             <a href="#kontakt" className="hover:text-brand-navy">Kontakt</a>
           </nav>
           <a
