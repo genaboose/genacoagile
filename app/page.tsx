@@ -110,11 +110,29 @@ export default function Page() {
 
       {/* TEAM (vereinfachte Karte; Bilder/Logos kannst du später ergänzen) */}
       <section id="team" className="py-14 md:py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight">Das Team</h3>
-          <p className="mt-2 text-slate-600 max-w-2xl">Dual Branding: Wir treten als GENACO Agile auf – und bewahren gleichzeitig die individuelle Autorenschaft unserer Expert:innen.</p>
-          {/* Hier kannst du deine Team-Karten einfügen */}
-        </div>
+<div className="max-w-7xl mx-auto px-4">
+  <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight">Das Team</h3>
+
+  <p className="text-sm font-semibold text-brand-navy mt-2">
+    Ein Team, viele Stärken – ein Vertrag, klare Verantwortung.
+  </p>
+
+  <p className="mt-2 text-slate-600 max-w-2xl">
+    Statt einzelne Generalisten zu koordinieren, arbeiten Sie mit einem eingespielten Team:
+    komplementäre Stärken, gemeinsame Playbooks, Qualitätssicherung und Vertretung bei Abwesenheiten.
+    Das reduziert Ihren Koordinationsaufwand, beschleunigt die Umsetzung und macht Ergebnisse verlässlich planbar.
+  </p>
+
+  <div className="mt-4">
+    <Link
+      href="/team"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border text-brand-navy hover:bg-slate-50"
+    >
+      Team kennenlernen <ArrowRight className="w-4 h-4" />
+    </Link>
+  </div>
+</div>
+
       </section>
 
       {/* CONTACT */}
