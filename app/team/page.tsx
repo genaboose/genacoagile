@@ -200,11 +200,6 @@ export default function TeamPage() {
           ))}
         </div>
 
-        {/* Hinweis */}
-        <p className="mt-8 text-xs text-slate-500">
-          Hinweis: Für individuelle Kickoff-Links (z. B. mit Stephan) hinterlege im Member-Objekt die Eigenschaft
-          <code className="mx-1 rounded bg-slate-100 px-1">booking</code> mit der persönlichen Kalender-URL.
-        </p>
       </main>
     </div>
   );
