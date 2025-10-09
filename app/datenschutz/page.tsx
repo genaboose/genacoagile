@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Datenschutz – GENACO Agile",
-  description: "Datenschutzerklärung für die Website von GENACO Agile.",
+  description: "Datenschutzerklärung für die Website der GENACO Agile.",
 };
 
 export default function DatenschutzPage() {
