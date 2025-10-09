@@ -347,7 +347,7 @@ Innerhalb unseres Onlineangebotes können Funktionen und Inhalte des Dienstes Xi
 
 Diese Datenschutzerklärung wurde vom Webseitenbetreiber angepasst.
 
-Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke
+Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke`;
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
