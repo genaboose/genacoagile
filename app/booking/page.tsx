@@ -8,7 +8,7 @@ import { Calendar, Clock, ShieldCheck, Sparkles } from 'lucide-react';
 type Tab = 'discovery' | 'kickoff';
 
 // 👉 Links anpassen:
-const CALENDLY_DISCOVERY = 'https://calendly.com/your-org/genaco-discovery-20';
+const CALENDLY_DISCOVERY = 'https://calendly.com/georgnauerz/erstgesprach';
 const CALENDLY_KICKOFF   = 'https://calendly.com/your-org/flow-xray-kickoff-45';
 
 // Optional: HubSpot Meetings-Links gehen genauso (einfach iframe src tauschen)
