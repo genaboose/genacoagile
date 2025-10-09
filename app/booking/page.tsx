@@ -9,7 +9,7 @@ type Tab = 'discovery' | 'kickoff';
 
 // 👉 Links anpassen:
 const CALENDLY_DISCOVERY = 'https://calendly.com/georgnauerz/erstgesprach';
-const CALENDLY_KICKOFF   = 'https://calendly.com/your-org/flow-xray-kickoff-45';
+const CALENDLY_KICKOFF   = 'https://calendly.com/georgnauerz/erstgesprach';
 
 // Optional: HubSpot Meetings-Links gehen genauso (einfach iframe src tauschen)
 
