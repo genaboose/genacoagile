@@ -6,7 +6,7 @@ export default function Impressum() {
       <p className="mt-4 text-slate-700">Ein Brand der GENACO UG ( Haftungsbeschränkt)</p>
       <p className="mt-4 text-slate-700">In Unterstützung durch die GNC Georg Nauerz Consulting GmbH</p>
       <p className="mt-4 text-slate-700">Adresse:</p>
-      <p className="mt-4 text-slate-700">Eisenbahnstraße 42, 67655 Kaiserslautern</p>
+      <p className="mt-4 text-slate-700">Adolph-Kolping-Platz 2, 67655 Kaiserslautern</p>
       <p className="mt-4 text-slate-700">Telefon: +49 6303 5045</p>
       <p className="mt-4 text-slate-700">Geschäftsführer der GENACO UG: Emma Nauerz</p>
       <p className="mt-4 text-slate-700">Anschrift wie oben</p>
